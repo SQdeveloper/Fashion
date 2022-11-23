@@ -1,0 +1,44 @@
+.scenery {
+    text-align: center;
+    @include flexbox(none, center, column, nowrap);
+
+    &__title { 
+        font-size:3em; 
+        font-weight: lighter;
+    }
+    &__contImg {
+        position: relative;
+        width: 60%;
+
+        
+        &-img {
+            width: 100%;
+            height: calc(100vh - 6em);
+            object-fit: cover;
+            filter: grayscale(1);
+            transition: filter 2s, opacity 2s;
+           
+            &:first-child {
+                margin: 2em 0;
+            }
+        }
+    }
+    &__img-reduced-1 {
+        position: absolute;
+        left: 0;
+        top: 4em;
+        transform: translateX(-50%);
+        opacity: 0;
+        width: 350px;
+        height: 200px;
+    }
+    &__img-reduced-2 {
+        position: absolute;
+        right: 0;
+        bottom: 4.5em;
+        transform: translateX(50%);
+        opacity: 0;
+        width: 350px;
+        height: 200px;
+    }
+}

@@ -1,10 +1,14 @@
 .scenery {
     text-align: center;
+    background-color: black;
     @include flexbox(none, center, column, nowrap);
 
     &__title { 
-        font-size:3em; 
+        font-size: 10em; 
         font-weight: lighter;
+        position: sticky;
+        color: white;
+        top: 0;
     }
     &__contImg {
         position: relative;
@@ -16,10 +20,15 @@
             height: calc(100vh - 6em);
             object-fit: cover;
             filter: grayscale(1);
-            transition: filter 2s, opacity 2s;
-           
+            cursor: none;
+            transition: filter 2s, opacity 2s, transform 1s;
+
             &:first-child {
                 margin: 2em 0;
+                margin-bottom: 8em; 
+            }
+            &:hover {
+                transform: scale(1.2)
             }
         }
     }

@@ -1,0 +1,7 @@
+.footer {
+    text-align: center;
+    @include flexbox(center, center, row, nowrap);
+    background-color: black;
+    color: white;
+    height: 4em;
+}

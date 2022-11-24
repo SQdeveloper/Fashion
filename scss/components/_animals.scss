@@ -1,15 +1,20 @@
 .animals {
-    @include flexbox(none, center, column, nowrap);
+    text-align: center;
 
     &__title {
-        font-size: 3em;
+        font-size: 10em;
         font-weight: lighter;
+        margin-bottom: .5em;
+    }
+    &__contPictures {
+        @include flexbox(none, center, column, nowrap);
     }
     &__img {
         position: sticky;
         bottom: 0;
         width: 70%;
         height: 30em;
+        cursor: none;
     
         &-1 {
             z-index: 5;

@@ -5,9 +5,23 @@ const sceneryImg = document.querySelectorAll(".scenery__contImg-img");
 const cursor = document.querySelector(".cursor");
 const animalsImg = document.querySelectorAll(".animals__img");
 const othersImg = document.querySelectorAll(".others__contImg");
+let number = 12;
 
+othersImg.forEach((img, i) =>{
 
-othersImg.forEach(img =>{
+    img.addEventListener("click", ()=>{
+        if(i==4){
+            window.open(`./html/others/presentacion15.html`);
+        }
+        if(i==5){
+            window.open(`./html/others/presentacion16.html`);
+        }
+        else if(i!=5){
+            window.open(`./html/others/presentacion${number + i}.html`);
+        }
+    });
+
+    //Modificación del cursor cuando este dentro de dicha sección
     img.addEventListener("mousemove", (event)=>{
         cursor.style.setProperty("--x", `${event.clientX}px`);
         cursor.style.setProperty("--y", `${event.clientY}px`);
